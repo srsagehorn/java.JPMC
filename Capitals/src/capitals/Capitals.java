@@ -1,10 +1,14 @@
-package map;
+package capitals;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Set;
-//import java.util.Map;
+import java.util.Map;
 
-public class Map {
+//Print all of the state names to the screen. 
+//Print all of the capital names to the screen. 
+//Print each state along with its capital to the screen. 
+
+public class Capitals {
     public static void main(String[] args) {
         Map<String, String> cityState = new HashMap<>();
                 
@@ -60,9 +64,23 @@ public class Map {
         cityState.put("Wyoming", "Cheyenne");
         
         Set set = cityState.entrySet();
-        Iterator iterator = set.iterator();
-        while(iterator.hasNext()) {
-        Map.Entry mentry = (Map.Entry)iterator.next();
-        System.out.print("The capital of " + mentry.getKey() + " is " + mentry.getValue());
+        System.out.println("The States are:");
+        Iterator states = set.iterator();
+        while(states.hasNext()) {
+        Map.Entry mentry = (Map.Entry)states.next();
+        System.out.println(mentry.getKey());
     }
+        System.out.println("The Capitals are:");
+        Iterator capitals = set.iterator();
+        while(capitals.hasNext()) {
+        Map.Entry mentry = (Map.Entry)capitals.next();
+        System.out.println(mentry.getValue());
+    }
+        System.out.println("The States and matching capitals are:");
+        Iterator both = set.iterator();
+        while(both.hasNext()) {
+        Map.Entry mentry = (Map.Entry)both.next();
+        System.out.println("The capital of " + mentry.getKey() + " is " + mentry.getValue());
+    }
+}
 }

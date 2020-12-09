@@ -5,7 +5,6 @@ import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.time.Period;
 import java.time.Year;
-//import java.time.format.DateTimeFormatter;
 
 public class BirthdayCalculator {
     public static void main(String[] args) {
